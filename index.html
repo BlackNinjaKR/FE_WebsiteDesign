@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Sets character encoding to UTF-8 for universal character support -->
+
+    <title>Listener</title>
+    <!-- The title of the web page (appears in the browser tab) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures proper scaling and responsiveness on different screen sizes -->
+
+    <link rel="stylesheet" href="styles/background.css">
+    <!-- Links to the external CSS file that defines styles for background, loader, etc. -->
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Loads the Particles.js library for animated particle backgrounds -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Loads Swiper.js's stylesheet — commonly used for responsive sliders/carousels -->
+
+</head>
+<body>
+    <!-- Particles background canvas element -->
+    <div id="particles-js"></div>
+    <!-- This div is where Particles.js renders the animated background -->
+
+    <!-- Fullscreen loader -->
+    <div id="loader">
+        <!-- Container holds the animated cube elements -->
+        <div class="container">
+            <!-- Each .cube element represents a bouncing loader block -->
+            <div class="cube"><div class="cube__inner"></div></div>
+            <div class="cube"><div class="cube__inner"></div></div>
+            <div class="cube"><div class="cube__inner"></div></div>
+        </div>
+    </div>
+
+    <!-- Header section -->
+    <header class="finisher-header">
+        <!-- Placeholder for additional animation scripts like FinisherHeader.js -->
+        <!-- Typically, this library adds animated gradient or geometric backgrounds -->
+    </header>
+
+    <!-- Main content container -->
+    <div class="main-content">
+        <!-- Insert actual webpage content here -->
+        <!-- Example: hero section, feature list, text, buttons, etc. -->
+    </div>
+
+    <!-- JavaScript for initializing background effects -->
+    <script src="scripts/background.js"></script>
+    <!-- Custom script that likely initializes or configures particles.js or other effects -->
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Duplicate: This script is already loaded in <head>. Can be removed to avoid redundancy -->
+</body>
+</html>
