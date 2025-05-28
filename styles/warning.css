@@ -126,3 +126,49 @@
   font-size: 0.8rem;
   color: #aaa;
 }
+
+  .devtools-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: radial-gradient(circle at center, #1c0000, #000);
+    color: #ff4d4d;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    backdrop-filter: blur(10px);
+    animation: fadeInOverlay 0.6s ease-in-out forwards;
+  }
+
+  .devtools-overlay h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 0 15px #ff4d4d;
+    animation: pulse 1.5s infinite;
+  }
+
+  .devtools-overlay p {
+    font-size: 1.2rem;
+    color: #ff9999;
+    margin-top: 1rem;
+    animation: fadeInText 1.2s ease forwards;
+  }
+
+  @keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0% { text-shadow: 0 0 15px #ff4d4d; }
+    50% { text-shadow: 0 0 25px #ff1a1a; }
+    100% { text-shadow: 0 0 15px #ff4d4d; }
+  }
