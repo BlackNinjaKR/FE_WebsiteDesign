@@ -12,6 +12,7 @@
     <!-- Ensures proper scaling and responsiveness on different screen sizes -->
 
     <link rel="stylesheet" href="styles/background.css">
+    <link rel="stylesheet" href="styles/introscreen.css">
     <!-- Links to the external CSS file that defines styles for background, loader, etc. -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -22,6 +23,15 @@
 
 </head>
 <body>
+    <div id="intro-screen">
+        <div class="intro-container">
+            <img src="assets/Logo.png" alt="Logo" class="intro-logo" />
+            <img src="assets/wallpaper.png" alt="Text" class="intro-text" />
+        </div>
+    </div>
+
+
+
     <!-- Particles background canvas element -->
     <div id="particles-js"></div>
     <!-- This div is where Particles.js renders the animated background -->
@@ -50,10 +60,20 @@
     </div>
 
     <!-- JavaScript for initializing background effects -->
-    <script src="scripts/background.js"></script>
+    <script src="scripts/background-obs.js"></script>
+    <script src="scripts/introscreen.js"></script>
     <!-- Custom script that likely initializes or configures particles.js or other effects -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Duplicate: This script is already loaded in <head>. Can be removed to avoid redundancy -->
+
+    <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        return false;
+        }
+    };
+</script>
 </body>
 </html>

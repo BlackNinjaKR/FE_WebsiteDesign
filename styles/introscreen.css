@@ -1,0 +1,105 @@
+/* ===============================
+   Fullscreen Overlay for Intro
+   =============================== */
+#intro-screen {
+  position: fixed;               /* Lock to screen */
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;   /* Full screen */
+  background: radial-gradient(   /* Dimmed gradient background */
+    circle at 50% 30%,
+    #1c2e3e, #0d1117 70%, #000000 100%
+  );
+  display: flex;                 /* Center contents */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;                 /* Appear above all other elements */
+  overflow: hidden;              /* Prevent elements from spilling out */
+}
+
+/* ===============================
+   Centered Animation Container
+   =============================== */
+.intro-container {
+  position: relative;            /* Needed for absolute children */
+  width: 125px;
+  height: 125px;                 /* Reduced size for logo/text */
+}
+
+/* ===============================
+   Logo Animation
+   =============================== */
+.intro-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125px;
+  height: 125px;
+  opacity: 0;                    /* Start invisible */
+  animation:
+    fadeIn 1s ease forwards,           /* Fade in immediately */
+    logoMoveUp 1s ease forwards 1.2s,  /* Slide up after fade */
+    logoExitUp 1s ease forwards 3.5s;  /* Slide further up and disappear */
+}
+
+/* ===============================
+   Text Animation
+   =============================== */
+.intro-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125px;
+  height: 125px;
+  opacity: 0;                    /* Start invisible */
+  animation:
+    textEnterDown 1s ease forwards 1.2s, /* Slide down and fade in */
+    textExitDown 1s ease forwards 3.5s;  /* Slide down more and fade out */
+}
+
+/* ===============================
+   Final Screen Fadeout
+   =============================== */
+#intro-screen.fade-out {
+  animation: screenFadeOut 1s ease-out;  /* Hide entire screen... This is bugged */
+}
+
+/* ===============================
+   Keyframe Animations
+   =============================== */
+
+/* Generic fade-in */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Logo moves up slightly */
+@keyframes logoMoveUp {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-25px); }
+}
+
+/* Logo exits upward */
+@keyframes logoExitUp {
+  0%   { transform: translateY(-25px); opacity: 1; }
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+
+/* Text slides down and appears */
+@keyframes textEnterDown {
+  0%   { transform: translateY(0); opacity: 0; }
+  100% { transform: translateY(40px); opacity: 1; }
+}
+
+/* Text exits further downward */
+@keyframes textExitDown {
+  0%   { transform: translateY(25px); opacity: 1; }
+  100% { transform: translateY(100px); opacity: 0; }
+}
+
+/* Entire screen fades out */
+@keyframes screenFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
