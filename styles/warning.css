@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Modal Container */
+.devtools-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.devtools-modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Modal Box */
+.devtools-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: #f0f0f0;
+  backdrop-filter: blur(10px);
+  animation: popupSlideUp 0.5s ease-out;
+  max-width: 90%;
+  width: 400px;
+}
+
+/* Headline */
+.devtools-content h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Text */
+.devtools-content p {
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Button */
+.devtools-content button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  background: #ff4b2b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 75, 43, 0.4);
+}
+
+.devtools-content button:hover {
+  background: #ff416c;
+  box-shadow: 0 0 14px rgba(255, 65, 108, 0.6);
+}
+
+/* Animation */
+@keyframes popupSlideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#devtools-warning {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.warning-box {
+  background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+  border: 2px solid #444;
+  border-radius: 16px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 0 20px #000;
+  max-width: 400px;
+}
+
+.warning-box h2 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  color: #ff5555;
+}
+
+.warning-box p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.warning-box small {
+  font-size: 0.8rem;
+  color: #aaa;
+}

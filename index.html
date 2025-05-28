@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="styles/background.css">
     <link rel="stylesheet" href="styles/introscreen.css">
+    <link rel="stylesheet" href="styles/warning.css">
     <!-- Links to the external CSS file that defines styles for background, loader, etc. -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -23,6 +24,18 @@
 
 </head>
 <body>
+
+    <!-- DevTools Warning Modal -->
+    <div id="devtools-warning">
+        <div class="warning-box">
+            <h2>👀 Hold up!</h2>
+            <p>I know you’re trying to look. I don’t want you to.</p>
+            <small>This code is owned by the developer and not licensed for distribution or inspection.</small>
+        </div>
+    </div>
+
+
+
     <div id="intro-screen">
         <div class="intro-container">
             <img src="assets/Logo.png" alt="Logo" class="intro-logo" />
@@ -62,18 +75,11 @@
     <!-- JavaScript for initializing background effects -->
     <script src="scripts/background-obs.js"></script>
     <script src="scripts/introscreen.js"></script>
+    <script src="scripts/warning.js"></script>
     <!-- Custom script that likely initializes or configures particles.js or other effects -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Duplicate: This script is already loaded in <head>. Can be removed to avoid redundancy -->
 
-    <script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.onkeydown = function(e) {
-        if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-        return false;
-        }
-    };
-</script>
 </body>
 </html>
