@@ -25,6 +25,17 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* For the entire page */
+body {
+  overflow: auto;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, Opera */
+}
+
 /* 
  * Styles the container for the particle effect.
  * Positioned fixed to cover the entire screen and stay static during scroll.
