@@ -80,7 +80,8 @@
 @media (max-width: 768px) {
   .about-card {
     flex-direction: column-reverse;
-    padding: 2rem;
+    padding: 6rem 2rem 2rem 0rem;
+    align-items: center;
     text-align: center;
   }
 
@@ -93,8 +94,8 @@
   }
 
   .about-image img {
-    max-width: 90%;
-    margin-bottom: 2rem;
+    max-width: 120%;
+    margin-bottom: 1rem;
   }
 }
 
