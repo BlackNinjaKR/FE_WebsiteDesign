@@ -131,7 +131,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 6rem 2rem 2rem 2rem; /* More top padding on mobile */
+    padding: 6rem 2rem 2rem 0rem; /* More top padding on mobile */
   }
 
   .hero-content {
