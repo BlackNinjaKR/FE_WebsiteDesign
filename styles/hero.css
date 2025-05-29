@@ -1,0 +1,129 @@
+/* Base Styles */
+.hero-section {
+  min-height: 100vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #f8f8f8;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  backdrop-filter: blur(1px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  gap: 3rem;
+}
+
+/* Heading with shimmer & glitch effect */
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #00ff99, #00ccff, #00ff99);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  animation: shimmer 4s infinite ease-in-out;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -2px); }
+  80% { transform: translate(1px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-button {
+  background-color: #00ff99;
+  color: #0d0d0d;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 12px #00ff99;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-button:hover {
+  background-color: #00e68a;
+  transform: scale(1.05);
+}
+
+/* Logo Section */
+.logo-content {
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.hero-logo {
+  max-width: 80%;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05) /*rotate(2deg)*/;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 153, 0.219));
+}
+
+/* Text Content */
+.text-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Responsive for Desktop */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 4rem;
+  }
+
+  .text-content {
+    max-width: 50%;
+  }
+
+  .logo-content {
+    max-width: 50%;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+}

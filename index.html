@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="styles/background.css">
     <link rel="stylesheet" href="styles/introscreen.css">
     <link rel="stylesheet" href="styles/warning.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Links to the external CSS file that defines styles for background, loader, etc. -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -24,6 +27,10 @@
 
 </head>
 <body>
+
+    <!-- Particles background canvas element -->
+    <div id="particles-js"></div>
+    <!-- This div is where Particles.js renders the animated background -->
 
     <!-- DevTools Warning Modal -->
     <div id="devtools-warning">
@@ -45,10 +52,6 @@
 
 
 
-    <!-- Particles background canvas element -->
-    <div id="particles-js"></div>
-    <!-- This div is where Particles.js renders the animated background -->
-
     <!-- Fullscreen loader -->
     <div id="loader">
         <!-- Container holds the animated cube elements -->
@@ -60,11 +63,40 @@
         </div>
     </div>
 
-    <!-- Header section -->
-    <header class="finisher-header">
-        <!-- Placeholder for additional animation scripts like FinisherHeader.js -->
-        <!-- Typically, this library adds animated gradient or geometric backgrounds -->
+    <header id="navbar" class="finisher-header">
+        <nav class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#hero">
+                    <img src="assets/Logo.png" alt="L;stner Logo" class="navbar-logo-img" />
+                </a>
+            </div>
+            <ul class="navbar-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="text-content">
+                <h1>Who we are</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="hero-button">About Us</a>
+            </div>
+                <div class="logo-content">
+                <img src="assets/hero-illustration.png" alt="Logo" class="hero-logo" />
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Here’s where you talk about your product story or mission.</p>
+    </section>
 
     <!-- Main content container -->
     <div class="main-content">
@@ -73,13 +105,14 @@
     </div>
 
     <!-- JavaScript for initializing background effects -->
-    <script src="scripts/background-obs.js"></script>
+    <script src="scripts/background.js"></script>
     <script src="scripts/introscreen.js"></script>
     <script src="scripts/warning-obs.js"></script>
-    <!-- Custom script that likely initializes or configures particles.js or other effects -->
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Duplicate: This script is already loaded in <head>. Can be removed to avoid redundancy -->
+    <script src="scripts/hero.js"></script>
+    <script src="scripts/navbar.js"></script>
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+    </script>
 
 </body>
 </html>

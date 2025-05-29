@@ -33,9 +33,9 @@ window.addEventListener('load', function () {
     // Particle Constructor
     var Particle = function (color, posIndex, o) {
         this.o = o;                       // Options object
-        this.r = parseColor(color);      // RGB color
+        //this.r = parseColor(color);      // RGB color
         this.d = this.randomDirection(); // Direction multiplier for pulsing
-        this.h = this.randomShape();     // Shape type: c, s, t
+        //this.h = this.randomShape();     // Shape type: c, s, t
         this.s = Math.abs(this.randomFromRange(this.o.size)); // Size
         this.setPosition(posIndex);      // Initial position
         this.vx = this.randomFromRange(this.o.speed.x) * this.randomDirection(); // X velocity
@@ -216,20 +216,6 @@ window.addEventListener('load', function () {
     t.FinisherHeader = FinisherHeader;
 })(window);
 
-// Initialize the FinisherHeader with your customized options
-new FinisherHeader({
-    count: 60, // Number of particles
-    size: { min: 20, max: 50, pulse: 0 }, // Size and optional pulsing
-    speed: { x: { min: -0.5, max: 0.5 }, y: { min: -0.5, max: 0.5 } },
-    colors: {
-        background: "#fefefe", // Light canvas background
-        particles: ["#FF69B4", "#FF1493", "#DB7093", "#FFC0CB"] // Neon pink shades
-    },
-    blending: "overlay", // Blend mode for overlapping glow
-    opacity: { center: 0.7, edge: 0 }, // Inner and outer opacity
-    skew: -5, // Skew angle for header
-    shapes: ["c", "s", "t"] // Circle, square, triangle
-});
 
 // Web-like Particle Network using particles.js
 particlesJS("particles-js", {
@@ -269,7 +255,7 @@ particlesJS("particles-js", {
         }
     },
     interactivity: {
-        detect_on: "canvas",
+        detect_on: "window",
         events: {
             onhover: { enable: true, mode: "grab" },
             onclick: { enable: false, mode: "push" },
