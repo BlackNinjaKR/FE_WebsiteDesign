@@ -103,6 +103,7 @@
   align-items: flex-start;
 }
 
+
 /* Responsive for Desktop */
 @media (min-width: 768px) {
   .hero-content {
@@ -111,7 +112,7 @@
     padding: 5rem 4rem;
   }
 
-  .text-content {
+  .text-content, .text-headsub-content {
     max-width: 50%;
   }
 
@@ -126,6 +127,29 @@
   .hero-content p {
     font-size: 1.5rem;
   }
+  
+.hero-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Or center if you want center alignment */
+  margin-bottom: 1rem;
+}
+
+.logo-text {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 0.5rem;
+  font-weight: 10;
+  margin-left: 0.5rem;
+  margin-top: -1rem;
+  margin-bottom: 0;
+  color: #878787;
+  letter-spacing: 0.5px;
+}
+
 }
 
 
@@ -140,12 +164,38 @@
     text-align: center;
   }
 
-  .text-content {
+  .text-content, .text-headsub-content {
     max-width: 100%;
   }
 
   .logo-content {
     max-width: 100%;
     margin-bottom: 2rem;
+  }
+
+    .hero-logo-text {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo-text {
+    font-size: 3rem; /* Smaller size for small screens */
+  }
+
+  .tagline {
+    font-size: 0.1rem;
+    margin-top: -0.5rem;
+    margin-left: 0.2rem;
+  }
+
+  .subheading {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    display: block;
+    margin: 1.5rem auto 0;
   }
 }

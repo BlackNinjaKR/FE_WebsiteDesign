@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/warning.css">
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Links to the external CSS file that defines styles for background, loader, etc. -->
 
@@ -81,9 +82,17 @@
     <section id="hero" class="hero-section">
         <div class="hero-content">
             <div class="text-content">
-                <h1>Who we are</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#" class="hero-button">About Us</a>
+                <!-- <b><h1>Here to Hear You</h1></b><br>
+                <p>In a world more connected than ever, so many of us still feel alone.</p>
+                <p>At Listener, we understand how heavy silence can feel. That's why we’re creating a space where you're not just a voice in the void — you're someone who matters.</p>
+                <p>Whether it's a whisper of pain or a shout for joy, your words deserve to be heard.</p><br>
+                <i><p>You're not alone. Not here.</p></i><br> -->
+                <div class="hero-logo-text">
+                    <h1 class="logo-text">Listener</h1>
+                    <p class="tagline">everyone needs listener</p>
+                </div>
+                <p class="subheading">Everyone may not need a therapist but everyone needs a listener for life.</p><br>
+                <a href="#about" class="hero-button">About Us</a>
             </div>
                 <div class="logo-content">
                 <img src="assets/hero-illustration.png" alt="Logo" class="hero-logo" />
@@ -91,12 +100,25 @@
         </div>
     </section>
 
+<section class="about-section" id="about">
+  <div class="about-card">
+    <div class="about-text">
+      <h2 class="about-heading">Why Listener?</h2>
+      <p>
+        We live in a world more connected than ever, yet many feel unseen, unheard, and alone.
+        <br><br>
+        Listener was born from a simple idea: that every voice deserves to be heard. You don’t have to be broken to talk. You don’t need to explain why you're hurting. You just need someone who cares enough to listen.
+        <br><br>
+        No therapy, no diagnosis — just presence. Because sometimes, presence is everything.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="assets/about-illustration.png" alt="Listening Illustration">
+    </div>
+  </div>
+</section>
 
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Here’s where you talk about your product story or mission.</p>
-    </section>
 
     <!-- Main content container -->
     <div class="main-content">
@@ -105,14 +127,17 @@
     </div>
 
     <!-- JavaScript for initializing background effects -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="scripts/background.js"></script>
     <script src="scripts/introscreen.js"></script>
     <script src="scripts/warning-obs.js"></script>
     <script src="scripts/hero.js"></script>
     <script src="scripts/navbar.js"></script>
+    <script src="scripts/about.js"></script>
     <script>
         document.addEventListener('contextmenu', e => e.preventDefault());
     </script>
+
 
 </body>
 </html>
