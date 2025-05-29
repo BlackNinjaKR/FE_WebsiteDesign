@@ -11,11 +11,10 @@
   justify-content: space-between;
   flex-direction: column-reverse;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(1px);
-  border-radius: 2rem;
-  padding: 4rem;
+  padding: 1.5rem;
   max-width: 1500px;
   width: 100%;
   color: #f0f0f0;
@@ -53,7 +52,7 @@
 
 .about-image {
   flex: 1;
-  max-width: 50%;
+  max-width: 70%;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
@@ -80,7 +79,10 @@
 @media (max-width: 768px) {
   .about-card {
     flex-direction: column-reverse;
-    padding: 6rem 2rem 2rem 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
     align-items: center;
     text-align: center;
   }
@@ -95,7 +97,6 @@
 
   .about-image img {
     max-width: 120%;
-    margin-bottom: 1rem;
   }
 }
 
