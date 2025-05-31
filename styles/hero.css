@@ -1,47 +1,57 @@
-/* Base Styles */
+/* ============================
+   Base Styles for Hero Section
+   ============================ */
 .hero-section {
-  min-height: 100vh;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  color: #f8f8f8;
+  min-height: 100vh; /* Full viewport height */
+  background: transparent; /* No background color */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 2rem; /* Space inside section */
+  color: #f8f8f8; /* Light text color */
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 2rem;
-  padding: 3rem 2rem;
-  width: 100%;
-  max-width: 1200px;
-  backdrop-filter: blur(1px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-  gap: 3rem;
+  display: flex; /* Flex container */
+  flex-direction: column; /* Stack vertically by default */
+  align-items: center; /* Center all items */
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent black for glassmorphism */
+  border-radius: 2rem; /* Rounded corners */
+  padding: 3rem 2rem; /* Inner spacing */
+  width: 100%; /* Full width container */
+  max-width: 1200px; /* Cap width */
+  backdrop-filter: blur(1px); /* Blur background behind */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  gap: 3rem; /* Space between children */
 }
 
-/* Heading with shimmer & glitch effect */
+/* ================================
+   Heading with shimmer & glitch effect
+   ================================ */
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  background: linear-gradient(90deg, #00ff99, #00ccff, #00ff99);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3rem; /* Large heading */
+  font-weight: 900; /* Extra bold */
+  background: linear-gradient(90deg, #00ff99, #00ccff, #00ff99); /* Animated gradient */
+  background-size: 200% auto; /* Twice the width for shimmer animation */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
   position: relative;
-  animation: shimmer 4s infinite ease-in-out;
+  animation: shimmer 4s infinite ease-in-out; /* Infinite shimmer */
   text-align: left;
   font-family: 'Montserrat', sans-serif;
 }
 
+/* =====================
+   Shimmer Animation
+   ===================== */
 @keyframes shimmer {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
 
+/* =====================
+   Glitch Animation (Unused)
+   ===================== */
 @keyframes glitch {
   0% { transform: translate(0); }
   20% { transform: translate(-2px, 2px); }
@@ -51,120 +61,137 @@
   100% { transform: translate(0); }
 }
 
+/* =====================
+   Paragraph Styling
+   ===================== */
 .hero-content p {
-  font-size: 1.25rem;
-  color: #ffffff;
-  text-align: left;
+  font-size: 1.25rem; /* Medium size text */
+  color: #ffffff; /* Bright white text */
+  text-align: left; /* Align to left */
   margin-bottom: 1.5rem;
   font-family: 'Montserrat', sans-serif;
 }
 
+/* =====================
+   Call-to-Action Button
+   ===================== */
 .hero-button {
-  background-color: #00ff99;
-  color: #0d0d0d;
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
-  font-weight: bold;
+  background-color: #00ff99; /* Bright green */
+  color: #0d0d0d; /* Dark text for contrast */
+  padding: 0.75rem 1.5rem; /* Size of button */
+  border-radius: 10px; /* Rounded edges */
+  font-weight: bold; /* Emphasize text */
   text-decoration: none;
-  box-shadow: 0 0 12px #00ff99;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 12px #00ff99; /* Glowy shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
 
+/* Hover effect for button */
 .hero-button:hover {
-  background-color: #00e68a;
-  transform: scale(1.05);
+  background-color: #00e68a; /* Slightly darker green */
+  transform: scale(1.05); /* Subtle zoom */
 }
 
-/* Logo Section */
+/* =====================
+   Logo Section Styling
+   ===================== */
 .logo-content {
-  width: 80%;
+  width: 80%; /* Responsive width */
   display: flex;
-  justify-content: right;
+  justify-content: right; /* Align logo to right */
   align-items: center;
 }
 
+/* Logo Image */
 .hero-logo {
-  max-width: 80%;
+  max-width: 80%; /* Prevent oversized logo */
   height: auto;
-  border-radius: 1rem;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 1rem; /* Rounded edges */
+  transition: transform 0.5s ease, filter 0.5s ease; /* Smooth hover */
 }
 
+/* Logo hover effect */
 .hero-logo:hover {
-  transform: scale(1.05) /*rotate(2deg)*/;
-  filter: drop-shadow(0 0 20px rgba(0, 255, 153, 0.219));
+  transform: scale(1.05); /* Slight zoom */
+  filter: drop-shadow(0 0 20px rgba(0, 255, 153, 0.219)); /* Neon glow effect */
 }
 
-/* Text Content */
+/* =====================
+   Text Container Section
+   ===================== */
 .text-content {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* Align text to left by default */
 }
 
-
-/* Responsive for Desktop */
+/* ===============================
+   Desktop-Specific Responsive Styles
+   =============================== */
 @media (min-width: 768px) {
   .hero-content {
-    flex-direction: row;
+    flex-direction: row; /* Place logo and text side by side */
     justify-content: space-between;
-    padding: 5rem 4rem;
+    padding: 5rem 4rem; /* More spacing for large screens */
   }
 
-  .text-content, .text-headsub-content {
-    max-width: 50%;
+  .text-content,
+  .text-headsub-content {
+    max-width: 50%; /* Half width for text */
   }
 
   .logo-content {
-    max-width: 50%;
+    max-width: 50%; /* Half width for logo */
   }
 
   .hero-content h1 {
-    font-size: 5rem;
+    font-size: 5rem; /* Even bigger heading */
   }
 
   .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Slightly larger paragraph text */
   }
-  
-.hero-logo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Or center if you want center alignment */
-  margin-bottom: 1rem;
+
+  .hero-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align left on desktop */
+    margin-bottom: 1rem;
+  }
+
+  .logo-text {
+    font-size: 4rem;
+    margin: 0;
+  }
+
+  .tagline {
+    font-size: 0.5rem;
+    font-weight: 10;
+    margin-left: 0.5rem;
+    margin-top: -1rem;
+    margin-bottom: 0;
+    color: #878787;
+    letter-spacing: 0.5px;
+  }
 }
 
-.logo-text {
-  font-size: 4rem;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 0.5rem;
-  font-weight: 10;
-  margin-left: 0.5rem;
-  margin-top: -1rem;
-  margin-bottom: 0;
-  color: #878787;
-  letter-spacing: 0.5px;
-}
-
-}
-
-
+/* ===============================
+   Mobile-Specific Responsive Styles
+   =============================== */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 6rem 2rem 2rem 0rem; /* More top padding on mobile */
+    padding: 6rem 2rem 2rem 0rem; /* More top padding */
   }
 
   .hero-content {
-    flex-direction: column-reverse; /* Image first, then content */
+    flex-direction: column-reverse; /* Logo on top, text below */
     align-items: center;
     text-align: center;
   }
 
-  .text-content, .text-headsub-content {
+  .text-content,
+  .text-headsub-content {
     max-width: 100%;
   }
 
@@ -173,18 +200,18 @@
     margin-bottom: 2rem;
   }
 
-    .hero-logo-text {
-    align-items: center;
+  .hero-logo-text {
+    align-items: center; /* Center text under logo */
     text-align: center;
     margin-bottom: 1.5rem;
   }
 
   .logo-text {
-    font-size: 3rem; /* Smaller size for small screens */
+    font-size: 3rem; /* Smaller for mobile */
   }
 
   .tagline {
-    font-size: 0.1rem;
+    font-size: 0.1rem; /* Very small text (adjust as needed) */
     margin-top: -0.5rem;
     margin-left: 0.2rem;
   }
@@ -196,6 +223,6 @@
 
   .hero-button {
     display: block;
-    margin: 1.5rem auto 0;
+    margin: 1.5rem auto 0; /* Center button on mobile */
   }
 }

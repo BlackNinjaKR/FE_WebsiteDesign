@@ -1,4 +1,6 @@
-/* Team section layout */
+/* ================================
+   Team Section Layout & Heading
+================================== */
 .team-section {
   padding-top: 0rem;
   padding-bottom: 3rem;
@@ -7,7 +9,7 @@
   text-align: center;
 }
 
-/* Heading */
+/* Section heading with animated gradient shimmer */
 .team-heading {
   margin-top: 4rem;
   margin-bottom: -0.5rem;
@@ -23,25 +25,31 @@
   animation: shimmer 5s linear infinite;
 }
 
+/* ================================
+   Carousel Wrapper and Scroll
+================================== */
 #teamCarousel {
   display: flex;
-  flex-wrap: nowrap; /* Prevents wrapping into column */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
   overflow-x: hidden;
   scroll-behavior: smooth;
   transition: transform 0.3s ease-in-out;
-  gap: 2rem; /* Adjust to match card spacing */
+  gap: 2rem;
   padding: 1rem;
 }
 
+/* Hide scrollbar across all major browsers */
 #teamCarousel::-webkit-scrollbar {
   display: none;
 }
 #teamCarousel {
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;     /* Firefox */
 }
 
-/* Team carousel container */
+/* ================================
+   Carousel Container & Track
+================================== */
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -52,23 +60,8 @@
   align-items: center;
 }
 
-/* Scrollable row */
+/* Scrollable track for cards */
 .carousel-track {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 1rem;
-  padding: 1rem 0;
-}
-
-/* Hide scrollbar */
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
-.carousel-track {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   display: flex;
   gap: 2rem;
   overflow-x: auto;
@@ -76,10 +69,21 @@
   padding: 1rem 0;
   flex-wrap: nowrap;
   justify-content: start;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory; /* Snap cards into place */
 }
 
-/* Navigation buttons */
+/* Hide scrollbar inside track */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ================================
+   Navigation Buttons
+================================== */
 .nav {
   position: absolute;
   top: 50%;
@@ -95,9 +99,11 @@
 .nav.left { left: 0; }
 .nav.right { right: 0; }
 
-/* Card styles */
+/* ================================
+   Team Member Card Styles
+================================== */
 .card {
-  scroll-snap-align: center;
+  scroll-snap-align: center; /* Aligns card during snap */
   box-sizing: border-box;
   flex: 0 0 auto;
   min-width: 280px;
@@ -112,13 +118,21 @@
   transition: transform 0.3s ease;
 }
 
+/* Extra width declaration for layout consistency */
+.card {
+  width: 320px;
+}
+
+/* Shine animation triggered on hover */
 .card:hover .shine-effect {
   --shine-x: 100%;
   --shine-visible: 1;
   animation: shineMove 1.5s forwards;
 }
 
-/* Avatar */
+/* ================================
+   Avatar Image
+================================== */
 .avatar {
   width: 100px;
   height: 100px;
@@ -128,13 +142,16 @@
   box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
 }
 
-/* Name shimmer effect */
+/* ================================
+   Card Content: Name, Title, Desc
+================================== */
 .name {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
 }
 
+/* Gradient shimmer effect for name */
 .shimmer-text {
   background: linear-gradient(90deg, #00ffcc, #00ffcc, #00ffff);
   background-size: 200% auto;
@@ -153,7 +170,6 @@
   }
 }
 
-/* Title and description */
 .title {
   font-size: 0.9rem;
   color: #ccc;
@@ -166,17 +182,9 @@
   line-height: 1.5;
 }
 
-.card {
-  position: relative;
-  width: 320px;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  overflow: hidden;
-}
-
+/* ================================
+   Shine Effect Overlay
+================================== */
 .shine-effect {
   position: absolute;
   top: 0;
@@ -194,7 +202,7 @@
   opacity: 0;
 }
 
-
+/* Shine animation keyframes */
 @keyframes shine-move {
   0% {
     transform: translateX(-100%);
@@ -208,25 +216,30 @@
     opacity: 0;
   }
 }
+
+/* Apply shine on hover */
 .card:hover .shine-effect {
   animation: shine-move 1.5s ease-in-out forwards;
   opacity: 1;
 }
 
-/* reverse */
+/* Reverse animation variant */
 .card.reversing .shine-effect {
   animation: shine-move 1.5s ease-in-out reverse;
   opacity: 1;
 }
 
-/* Responsive fallback */
+/* ================================
+   Responsive Adjustments
+================================== */
 @media (max-width: 768px) {
-    .team-section{
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    .card {
-    min-width: 100%; /* Make cards take more width on small screens */
+  .team-section {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .card {
+    min-width: 100%;
     max-width: 100%;
     padding: 1rem;
     text-align: center;
@@ -243,10 +256,13 @@
   }
 
   .nav {
-    display: none;
+    display: none; /* Hide arrows on small screens */
   }
 }
 
+/* ================================
+   Dragging Interaction Style
+================================== */
 #teamCarousel.dragging {
   cursor: grabbing;
   user-select: none;

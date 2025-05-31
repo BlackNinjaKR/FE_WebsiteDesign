@@ -1,13 +1,18 @@
+/* ================================
+   Font Import
+================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-/* Modal Container */
+/* ================================
+   DevTools Modal Overlay
+================================== */
 .devtools-modal {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); /* Glass effect */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,12 +21,15 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* Hidden state for modal (fade out) */
 .devtools-modal.hidden {
   opacity: 0;
   pointer-events: none;
 }
 
-/* Modal Box */
+/* ================================
+   Modal Content Box
+================================== */
 .devtools-content {
   background: rgba(255, 255, 255, 0.05);
   padding: 2rem 2.5rem;
@@ -36,7 +44,7 @@
   width: 400px;
 }
 
-/* Headline */
+/* Modal Title */
 .devtools-content h2 {
   margin-top: 0;
   font-size: 1.75rem;
@@ -46,7 +54,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Text */
+/* Modal Paragraph */
 .devtools-content p {
   margin: 1rem 0;
   line-height: 1.5;
@@ -54,7 +62,7 @@
   opacity: 0.85;
 }
 
-/* Button */
+/* Modal Button */
 .devtools-content button {
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
@@ -69,12 +77,15 @@
   box-shadow: 0 0 10px rgba(255, 75, 43, 0.4);
 }
 
+/* Button Hover Effect */
 .devtools-content button:hover {
   background: #ff416c;
   box-shadow: 0 0 14px rgba(255, 65, 108, 0.6);
 }
 
-/* Animation */
+/* ================================
+   Popup Animation
+================================== */
 @keyframes popupSlideUp {
   from {
     transform: translateY(30px);
@@ -86,6 +97,9 @@
   }
 }
 
+/* ================================
+   DevTools Warning Fullscreen Box
+================================== */
 #devtools-warning {
   position: fixed;
   top: 0; left: 0;
@@ -101,6 +115,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Warning Box Style */
 .warning-box {
   background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
   border: 2px solid #444;
@@ -111,64 +126,75 @@
   max-width: 400px;
 }
 
+/* Warning Title */
 .warning-box h2 {
   margin: 0 0 10px;
   font-size: 1.8rem;
   color: #ff5555;
 }
 
+/* Warning Text */
 .warning-box p {
   font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
+/* Small Footer Text */
 .warning-box small {
   font-size: 0.8rem;
   color: #aaa;
 }
 
-  .devtools-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: radial-gradient(circle at center, #1c0000, #000);
-    color: #ff4d4d;
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 99999;
-    backdrop-filter: blur(10px);
-    animation: fadeInOverlay 0.6s ease-in-out forwards;
-  }
+/* ================================
+   Critical Overlay Lock Screen
+================================== */
+.devtools-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: radial-gradient(circle at center, #1c0000, #000);
+  color: #ff4d4d;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  backdrop-filter: blur(10px);
+  animation: fadeInOverlay 0.6s ease-in-out forwards;
+}
 
-  .devtools-overlay h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    text-shadow: 0 0 15px #ff4d4d;
-    animation: pulse 1.5s infinite;
-  }
+/* Overlay Title */
+.devtools-overlay h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 0 0 15px #ff4d4d;
+  animation: pulse 1.5s infinite;
+}
 
-  .devtools-overlay p {
-    font-size: 1.2rem;
-    color: #ff9999;
-    margin-top: 1rem;
-    animation: fadeInText 1.2s ease forwards;
-  }
+/* Overlay Message */
+.devtools-overlay p {
+  font-size: 1.2rem;
+  color: #ff9999;
+  margin-top: 1rem;
+  animation: fadeInText 1.2s ease forwards;
+}
 
-  @keyframes fadeInOverlay {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+/* ================================
+   Overlay Animations
+================================== */
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-  @keyframes fadeInText {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  @keyframes pulse {
-    0% { text-shadow: 0 0 15px #ff4d4d; }
-    50% { text-shadow: 0 0 25px #ff1a1a; }
-    100% { text-shadow: 0 0 15px #ff4d4d; }
-  }
+@keyframes pulse {
+  0%   { text-shadow: 0 0 15px #ff4d4d; }
+  50%  { text-shadow: 0 0 25px #ff1a1a; }
+  100% { text-shadow: 0 0 15px #ff4d4d; }
+}

@@ -46,156 +46,250 @@
     </div>
 
 
-
-    <div id="intro-screen">
-        <div class="intro-container">
-            <img src="assets/Logo.png" alt="Logo" class="intro-logo" />
-            <img src="assets/wallpaper.png" alt="Text" class="intro-text" />
-        </div>
+<!-- ===============================
+     Intro Screen Section
+     Displays a centered logo and intro image on initial load
+================================== -->
+<div id="intro-screen">
+    <div class="intro-container">
+        <!-- Company or app logo image -->
+        <img src="assets/Logo.png" alt="Logo" class="intro-logo" />
+        
+        <!-- Decorative or title image used as the intro "splash text" -->
+        <img src="assets/wallpaper.png" alt="Text" class="intro-text" />
     </div>
+</div>
 
 
-
-    <!-- Fullscreen loader -->
-    <div id="loader">
-        <!-- Container holds the animated cube elements -->
-        <div class="container">
-            <!-- Each .cube element represents a bouncing loader block -->
-            <div class="cube"><div class="cube__inner"></div></div>
-            <div class="cube"><div class="cube__inner"></div></div>
-            <div class="cube"><div class="cube__inner"></div></div>
-        </div>
+<!-- ===============================
+     Fullscreen Loader
+     Displays animated loader cubes while content is being prepared
+================================== -->
+<div id="loader">
+    <!-- Container for loader animation -->
+    <div class="container">
+        <!-- Each cube is a bouncing loader block -->
+        <div class="cube"><div class="cube__inner"></div></div>
+        <div class="cube"><div class="cube__inner"></div></div>
+        <div class="cube"><div class="cube__inner"></div></div>
     </div>
+</div>
 
-    <header id="navbar" class="finisher-header">
-        <nav class="navbar-container">
-            <div class="navbar-logo">
-                <a href="#hero">
-                    <img src="assets/Logo.png" alt="L;stner Logo" class="navbar-logo-img" />
-                </a>
-            </div>
-            <ul class="navbar-menu">
+
+<!-- ===============================
+     Navigation Bar (Header)
+     Provides anchor links to different sections of the site
+================================== -->
+<header id="navbar" class="finisher-header">
+    <nav class="navbar-container">
+
+        <!-- Logo on the left side of the navbar linking to the hero section -->
+        <div class="navbar-logo">
+            <a href="#hero">
+                <img src="assets/Logo.png" alt="L;stner Logo" class="navbar-logo-img" />
+            </a>
+        </div>
+
+        <!-- Main menu with section links -->
+        <ul class="navbar-menu">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#mission">Mission & Vision</a></li>
             <li><a href="#team">Our Team</a></li>
-            </ul>
-        </nav>
-    </header>
+        </ul>
+        
+    </nav>
+</header>
 
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <div class="text-content">
-                <!-- <b><h1>Here to Hear You</h1></b><br>
-                <p>In a world more connected than ever, so many of us still feel alone.</p>
-                <p>At Listener, we understand how heavy silence can feel. That's why we’re creating a space where you're not just a voice in the void — you're someone who matters.</p>
-                <p>Whether it's a whisper of pain or a shout for joy, your words deserve to be heard.</p><br>
-                <i><p>You're not alone. Not here.</p></i><br> -->
-                <div class="hero-logo-text">
-                    <h1 class="logo-text">Listener</h1>
-                    <p class="tagline">everyone needs listener</p>
-                </div>
-                <p class="subheading">Everyone may not need a therapist but everyone needs a listener for life.</p><br>
-                <a href="#about" class="hero-button">About Us</a>
+<!-- ===============================
+     Hero Section
+     Landing area with tagline and key message
+================================== -->
+<section id="hero" class="hero-section">
+    <div class="hero-content">
+        <div class="text-content">
+
+            <!-- Original messaging temporarily commented out for future use -->
+            <!-- 
+            <b><h1>Here to Hear You</h1></b><br>
+            <p>In a world more connected than ever, so many of us still feel alone.</p>
+            <p>At Listener, we understand how heavy silence can feel. That's why we’re creating a space where you're not just a voice in the void — you're someone who matters.</p>
+            <p>Whether it's a whisper of pain or a shout for joy, your words deserve to be heard.</p><br>
+            <i><p>You're not alone. Not here.</p></i><br>
+            -->
+
+            <!-- Current logo-based headline and tagline -->
+            <div class="hero-logo-text">
+                <h1 class="logo-text">Listener</h1>
+                <p class="tagline">everyone needs listener</p>
             </div>
-                <div class="logo-content">
-                <img src="assets/hero-illustration.png" alt="Logo" class="hero-logo" />
-            </div>
+
+            <!-- Supporting line reinforcing the brand mission -->
+            <p class="subheading">Everyone may not need a therapist but everyone needs a listener for life.</p><br>
+
+            <!-- Button linking to About Us section -->
+            <a href="#about" class="hero-button">About Us</a>
         </div>
-    </section>
 
+        <!-- Right side illustration for visual appeal -->
+        <div class="logo-content">
+            <img src="assets/hero-illustration.png" alt="Logo" class="hero-logo" />
+        </div>
+    </div>
+</section>
+
+
+<!-- ===============================
+     About Section
+     Explains the purpose and philosophy behind Listener
+================================== -->
 <section class="about-section" id="about">
-  <div class="about-card">
-    <div class="about-text">
-      <h2 class="about-heading">Why Listener?</h2>
-      <p>
-        We live in a world more connected than ever, yet many feel unseen, unheard, and alone.
-        <br><br>
-        Listener was born from a simple idea: that every voice deserves to be heard. You don’t have to be broken to talk. You don’t need to explain why you're hurting. You just need someone who cares enough to listen.
-        <br><br>
-        No therapy, no diagnosis — just presence. Because sometimes, presence is everything.
-      </p>
+    <div class="about-card">
+        <!-- Textual message about the problem and Listener's solution -->
+        <div class="about-text">
+            <h2 class="about-heading">Why Listener?</h2>
+            <p>
+                We live in a world more connected than ever, yet many feel unseen, unheard, and alone.
+                <br><br>
+                Listener was born from a simple idea: that every voice deserves to be heard. You don’t have to be broken to talk. You don’t need to explain why you're hurting. You just need someone who cares enough to listen.
+                <br><br>
+                No therapy, no diagnosis — just presence. Because sometimes, presence is everything.
+            </p>
+        </div>
+
+        <!-- Supporting illustration to enhance understanding -->
+        <div class="about-image">
+            <img src="assets/about-illustration.png" alt="Listening Illustration">
+        </div>
     </div>
-    <div class="about-image">
-      <img src="assets/about-illustration.png" alt="Listening Illustration">
-    </div>
-  </div>
 </section>
 
-<section  id="mission">
-  <h2 class="mission-heading">Our Mission</h2>
+
+<!-- ===============================
+     Mission Statement
+     Short header for the mission section
+================================== -->
+<section id="mission">
+    <h2 class="mission-heading">Our Mission</h2>
 </section>
 
+
+<!-- ===============================
+     Mission Gallery
+     Highlights three pillars of the mission in card format
+================================== -->
 <section class="mission-gallery">
-  <div class="mission-card">
-    <img src="assets/mission1.jpg" alt="Mission 1">
-    <h3 class="shimmer">Compassionate Listening</h3>
-    <p>We're here to truly hear you, without judgment or interruption.</p>
-  </div>
+    <!-- Mission Card 1 -->
+    <div class="mission-card">
+        <img src="assets/mission1.jpg" alt="Mission 1">
+        <h3 class="shimmer">Compassionate Listening</h3>
+        <p>We're here to truly hear you, without judgment or interruption.</p>
+    </div>
 
-  <div class="mission-card">
-    <img src="assets/mission2.jpg" alt="Mission 2">
-    <h3 class="shimmer">Creating Safe Spaces</h3>
-    <p>A calm, welcoming environment for all who feel alone.</p>
-  </div>
+    <!-- Mission Card 2 -->
+    <div class="mission-card">
+        <img src="assets/mission2.jpg" alt="Mission 2">
+        <h3 class="shimmer">Creating Safe Spaces</h3>
+        <p>A calm, welcoming environment for all who feel alone.</p>
+    </div>
 
-  <div class="mission-card">
-    <img src="assets/mission3.jpg" alt="Mission 3">
-    <h3 class="shimmer">Spreading Hope</h3>
-    <p>We believe in healing through connection and empathy.</p>
-  </div>
+    <!-- Mission Card 3 -->
+    <div class="mission-card">
+        <img src="assets/mission3.jpg" alt="Mission 3">
+        <h3 class="shimmer">Spreading Hope</h3>
+        <p>We believe in healing through connection and empathy.</p>
+    </div>
 </section>
 
 
+<!-- ===============================
+     Vision Section
+     Communicates the long-term goals and ideals of Listener
+================================== -->
+
+<!-- Vision Section Heading -->
 <h2 class="mission-heading">Our Vision for Tomorrow</h2>
 
+<!-- Vision Gallery showing 5 thematic cards -->
 <section class="mission-gallery" id="vision">
+
+  <!-- Vision Card 1: Accessibility and inclusiveness -->
   <div class="mission-card">
     <img src="assets/vision1.jpg" alt="Mission 1">
     <h3 class="shimmer">Connection Without Barriers</h3>
     <p>No matter where you are or who you are, you deserve to feel heard, seen, and valued.</p>
   </div>
 
+  <!-- Vision Card 2: Healing through presence, even in silence -->
   <div class="mission-card">
     <img src="assets/vision2.jpg" alt="Mission 2">
     <h3 class="shimmer">Healing Through Presence</h3>
     <p>Sometimes, being there is enough. We believe in creating presence even in silence.</p>
   </div>
 
+  <!-- Vision Card 3: Emotional safety and safe environments -->
   <div class="mission-card">
     <img src="assets/vision3.jpg" alt="Mission 3">
     <h3 class="shimmer">Safe Spaces for Every Soul</h3>
     <p>Your voice deserves a sanctuary. We envision spaces where vulnerability is protected.</p>
   </div>
 
+  <!-- Vision Card 4: Combating loneliness on a systemic level -->
   <div class="mission-card">
     <img src="assets/vision4.jpg" alt="Mission 3">
     <h3 class="shimmer">A Future Without Loneliness</h3>
     <p>We’re building more than a platform—we’re shaping a world where isolation has no place.</p>
   </div>
 
+  <!-- Vision Card 5: Valuing every voice, especially the quiet ones -->
   <div class="mission-card">
     <img src="assets/vision5.jpg" alt="Mission 3">
     <h3 class="shimmer">Voices That Matter</h3>
     <p>Every unheard story, every quiet cry, every late-night whisper—deserves a <b>listener</b> who cares.</p>
   </div>
+  
 </section>
+<!-- ============================================
+     Team Section
+     Highlights the key members behind Listener
+=============================================== -->
 
 <section class="team-section">
+  <!-- Section Heading -->
   <h2 class="team-heading" id="team">Our Team for Listener</h2>
 
+  <!-- Carousel wrapper to allow side-scrolling of cards -->
   <div class="carousel-container">
+
+    <!-- Left navigation arrow -->
     <button class="nav left" onclick="scrollCarousel(-1)">&#10094;</button>
 
+    <!-- Carousel track containing individual team member cards -->
     <div class="carousel-track" id="teamCarousel">
+
+      <!-- ============================
+           Individual Team Member Card
+           ============================ -->
+
+      <!-- Card 1: Koustav Shaw -->
       <div class="card" data-original="true">
+        <!-- Shine effect overlay for card hover -->
         <div class="shine-effect"></div>
+
+        <!-- Team member avatar -->
         <img src="assets/Logo.png" class="avatar" />
+
+        <!-- Member name with shimmer animation -->
         <h3 class="name shimmer-text">Koustav Shaw</h3>
+
+        <!-- Role or title of the member -->
         <p class="title">Founder & CEO @ Listener</p>
+
+        <!-- Short member bio or placeholder -->
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       </div>
 
+      <!-- Card 2: Anik Dasgupta -->
       <div class="card" data-original="true">
         <div class="shine-effect"></div>
         <img src="assets/Logo.png" class="avatar" />
@@ -204,6 +298,7 @@
         <p class="description">Lorem ipsum dolor sit amet...</p>
       </div>
 
+      <!-- Card 3: Sirjan Kaur Pahuja -->
       <div class="card" data-original="true">
         <div class="shine-effect"></div>
         <img src="assets/Logo.png" class="avatar" />
@@ -212,6 +307,7 @@
         <p class="description">Lorem ipsum dolor sit amet...</p>
       </div>
 
+      <!-- Card 4: Dewan Aviral -->
       <div class="card" data-original="true">
         <div class="shine-effect"></div>
         <img src="assets/Logo.png" class="avatar" />
@@ -221,25 +317,51 @@
       </div>
     </div>
 
+    <!-- Right navigation arrow -->
     <button class="nav right" onclick="scrollCarousel(1)">&#10095;</button>
   </div>
 </section>
 
 
-    <!-- JavaScript for initializing background effects -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="scripts/background.js"></script>
-    <script src="scripts/introscreen.js"></script>
-    <script src="scripts/warning-obs.js"></script>
-    <script src="scripts/hero.js"></script>
-    <script src="scripts/navbar.js"></script>
-    <script src="scripts/about.js"></script>
-    <script src="scripts/team.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('contextmenu', e => e.preventDefault());
-    </script>
+<!-- ===========================================
+     JavaScript Includes & Initialization Logic
+============================================ -->
+
+<!-- Library: ScrollReveal -->
+<!-- Used for scroll-triggered animations -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Background particle or visual effects -->
+<script src="scripts/background.js"></script>
+
+<!-- Controls intro screen behavior like fading out after load -->
+<script src="scripts/introscreen.js"></script>
+
+<!-- Detects if screen recording or devtools is active (potential warning mechanism) -->
+<script src="scripts/warning-obs.js"></script>
+
+<!-- Animations or logic related to the hero section (e.g., text, buttons) -->
+<script src="scripts/hero.js"></script>
+
+<!-- Handles navigation bar interactions (e.g., scroll shrink, active highlighting) -->
+<script src="scripts/navbar.js"></script>
+
+<!-- Script controlling About Us section (could include animations or counters) -->
+<script src="scripts/about.js"></script>
+
+<!-- Enables team carousel behavior (likely handles left/right scroll) -->
+<script src="scripts/team.js"></script>
+
+<!-- Swiper.js library: Enables slider/carousel functionality -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Duplicate — optional to keep if needed for compatibility -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+
+<!-- Disable right-click context menu on the entire document -->
+<!-- Useful for content protection or cleaner UX -->
+<script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+</script>
 
 
 </body>

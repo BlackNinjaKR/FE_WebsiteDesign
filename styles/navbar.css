@@ -1,15 +1,25 @@
-/* Navbar Base Style */
+/* === Navbar Base Style === */
 .finisher-header {
-  position: fixed;
+  position: fixed; /* Sticks navbar to the top of the page */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  z-index: 999; /* Ensures navbar stays above all other content */
+
+  /* Gradient background from opaque to transparent for sleek effect */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+
   color: #ffffff;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; /* Smooth slide-up on hide */
 }
 
+/* === Container for Navbar Content === */
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -17,47 +27,55 @@
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  
+
   font-family: 'Montserrat', sans-serif;
 }
 
+/* === Logo Text Style === */
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
+
+  /* Gradient color with transparent text for shimmer effect */
   background: linear-gradient(90deg, #00ff99, #00ccff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* === Menu Items === */
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2rem; /* Space between items */
 }
 
+/* === Menu Links === */
 .navbar-menu li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Smooth color transition on hover */
 }
 
+/* === Hover Effect on Links === */
 .navbar-menu li a:hover {
   color: #00ff99;
 }
 
-/* Hide on scroll down */
+/* === Hidden State for Navbar on Scroll Down === */
 .finisher-header.hide {
-  transform: translateY(-100%);
+  transform: translateY(-100%); /* Slide navbar off the top */
 }
 
+/* === Logo Image Styling === */
 .navbar-logo-img {
   height: 60px;
   width: auto;
-  filter: drop-shadow(0 0 5px #00ff99);
+  filter: drop-shadow(0 0 5px #00ff99); /* Glow effect */
   transition: transform 0.3s ease;
 }
 
+/* === Hover Animation for Logo === */
 .navbar-logo-img:hover {
-  transform: scale(1.1) rotate(1deg);
+  transform: scale(1.1) rotate(1deg); /* Slight zoom and rotation */
 }

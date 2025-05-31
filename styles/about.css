@@ -1,115 +1,126 @@
+/* Container for the entire About section */
 .about-section {
-  padding: 3rem 3rem;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 3rem 3rem; /* Spacing around the section */
+  background: transparent; /* No background color, allows backdrop to show */
+  display: flex; /* Flex container for centering */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
 }
 
+/* Main card container that holds text and image */
 .about-card {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column-reverse;
-  align-items: center;
-  gap: 2rem;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(1px);
-  padding: 1.5rem;
-  max-width: 1500px;
-  width: 100%;
-  color: #f0f0f0;
-  -webkit-backdrop-filter: blur(1px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-  flex-wrap: wrap;
+  display: flex; /* Flex layout for image and text alignment */
+  justify-content: space-between; /* Space between image and text */
+  flex-direction: column-reverse; /* Stack vertically on small screens, image below text */
+  align-items: center; /* Center items horizontally */
+  gap: 2rem; /* Gap between image and text */
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent background for glass effect */
+  backdrop-filter: blur(1px); /* Blur background behind the card */
+  padding: 1.5rem; /* Inner spacing */
+  max-width: 1500px; /* Maximum width */
+  width: 100%; /* Full width within its container */
+  color: #f0f0f0; /* Default text color */
+  -webkit-backdrop-filter: blur(1px); /* Safari support for blur */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Soft shadow around card */
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
 }
 
+/* Gradient animated heading text */
 .about-heading {
-    font-size: 3rem;
-  font-weight: 900;
-  background: linear-gradient(90deg, #00ff99, #00ccff, #00ff99);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3rem; /* Large font size */
+  font-weight: 900; /* Extra bold text */
+  background: linear-gradient(90deg, #00ff99, #00ccff, #00ff99); /* Color-changing gradient */
+  background-size: 200% auto; /* Double width to animate */
+  -webkit-background-clip: text; /* Clip background to text (Safari/Chrome) */
+  -webkit-text-fill-color: transparent; /* Make text fill transparent so gradient shows */
   position: relative;
-  animation: shimmer 4s infinite ease-in-out;
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
+  animation: shimmer 4s infinite ease-in-out; /* Infinite shimmer animation */
+  text-align: left; /* Align heading to left */
+  font-family: 'Montserrat', sans-serif; /* Clean, modern font */
 }
 
+/* Sub-heading text */
 .about-text h2 {
-  font-size: 3rem;
-  color: #00ff99;
-  margin-bottom: 1rem;
+  font-size: 3rem; /* Large subheading */
+  color: #00ff99; /* Bright green color */
+  margin-bottom: 1rem; /* Space below heading */
 }
 
+/* Paragraph text in About section */
 .about-text p {
-  font-size: 1.25rem;
-  color: #ffffff;
-  text-align: left;
-  margin-bottom: 1.5rem;
+  font-size: 1.25rem; /* Slightly larger than normal text */
+  color: #ffffff; /* White color for readability */
+  text-align: left; /* Align left for readability */
+  margin-bottom: 1.5rem; /* Space below paragraph */
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Image container */
 .about-image {
-  flex: 1;
-  max-width: 70%;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  flex: 1; /* Take available space */
+  max-width: 70%; /* Restrict image container size */
+  transition: transform 0.5s ease, filter 0.5s ease; /* Smooth hover effects */
 }
 
+/* Image styling */
 .about-image img {
-    width: 100%;
-  height: auto;
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 400px; /* Limit maximum width */
+  border-radius: 1rem; /* Rounded corners */
 }
+
+/* Hover effect on image */
 .about-image:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 20px rgba(0, 255, 153, 0.219));
+  transform: scale(1.05); /* Slight zoom */
+  filter: drop-shadow(0 0 20px rgba(0, 255, 153, 0.219)); /* Soft glow */
 }
 
+/* Text container */
 .about-text {
-  flex: 1;
-  padding: 1rem 2rem;
+  flex: 1; /* Take available space */
+  padding: 1rem 2rem; /* Inner spacing */
 }
 
-.about-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 1rem;
-}
-
+/* Responsive styles for small screens (below 768px width) */
 @media (max-width: 768px) {
   .about-card {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* Stack vertically on smaller devices */
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 3rem;
     padding-bottom: 1rem;
     align-items: center;
-    text-align: center;
+    text-align: center; /* Center text for better mobile appearance */
   }
 
   .about-text h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller heading for mobile */
   }
 
   .about-text p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller paragraph text */
   }
 
   .about-image img {
-    max-width: 120%;
+    max-width: 120%; /* Allow image to be slightly larger than container */
   }
 }
 
-
+/* Keyframes for animated gradient shimmer effect */
 @keyframes shimmer {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: 0% center; /* Start shimmer from left */
+  }
+  100% {
+    background-position: 200% center; /* Move shimmer to the right */
+  }
 }
 
+/* Responsive styles for medium and larger screens (768px and above) */
 @media (min-width: 768px) {
   .about-card {
-    flex-direction: row-reverse; /* Image left, text right */
-    padding: 4rem;
+    flex-direction: row-reverse; /* Image on left, text on right for desktop */
+    padding: 4rem; /* More spacious padding for large screens */
   }
 }
-
