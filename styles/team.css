@@ -1,0 +1,253 @@
+/* Team section layout */
+.team-section {
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  text-align: center;
+}
+
+/* Heading */
+.team-heading {
+  margin-top: 4rem;
+  margin-bottom: -0.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  padding: 0 1rem;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #00ff99, #00ccff, #00ff99);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+#teamCarousel {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping into column */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: transform 0.3s ease-in-out;
+  gap: 2rem; /* Adjust to match card spacing */
+  padding: 1rem;
+}
+
+#teamCarousel::-webkit-scrollbar {
+  display: none;
+}
+#teamCarousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Team carousel container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+/* Scrollable row */
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+/* Hide scrollbar */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  flex-wrap: nowrap;
+  justify-content: start;
+  scroll-snap-type: x mandatory;
+}
+
+/* Navigation buttons */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.nav.left { left: 0; }
+.nav.right { right: 0; }
+
+/* Card styles */
+.card {
+  scroll-snap-align: center;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-width: 280px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .shine-effect {
+  --shine-x: 100%;
+  --shine-visible: 1;
+  animation: shineMove 1.5s forwards;
+}
+
+/* Avatar */
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+}
+
+/* Name shimmer effect */
+.name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #00ffcc, #00ffcc, #00ffff);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmerText 2s linear infinite;
+}
+
+@keyframes shimmerText {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Title and description */
+.title {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.shine-effect {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 45%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 55%
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+}
+
+
+@keyframes shine-move {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.card:hover .shine-effect {
+  animation: shine-move 1.5s ease-in-out forwards;
+  opacity: 1;
+}
+
+/* reverse */
+.card.reversing .shine-effect {
+  animation: shine-move 1.5s ease-in-out reverse;
+  opacity: 1;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+    .team-section{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .card {
+    min-width: 100%; /* Make cards take more width on small screens */
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .card img.avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .carousel-track {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+#teamCarousel.dragging {
+  cursor: grabbing;
+  user-select: none;
+}

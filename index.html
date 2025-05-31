@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/mission.css">
+    <link rel="stylesheet" href="styles/team.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Links to the external CSS file that defines styles for background, loader, etc. -->
 
@@ -25,6 +26,7 @@
     <!-- Loads the Particles.js library for animated particle backgrounds -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- Loads Swiper.js's stylesheet — commonly used for responsive sliders/carousels -->
 
 </head>
@@ -147,7 +149,7 @@
 
 <h2 class="mission-heading">Our Vision for Tomorrow</h2>
 
-<section class="mission-gallery" id="mission">
+<section class="mission-gallery" id="vision">
   <div class="mission-card">
     <img src="assets/vision1.jpg" alt="Mission 1">
     <h3 class="shimmer">Connection Without Barriers</h3>
@@ -179,11 +181,50 @@
   </div>
 </section>
 
-    <!-- Main content container -->
-    <div class="main-content">
-        <!-- Insert actual webpage content here -->
-        <!-- Example: hero section, feature list, text, buttons, etc. -->
+<section class="team-section">
+  <h2 class="team-heading" id="team">Our Team for Listener</h2>
+
+  <div class="carousel-container">
+    <button class="nav left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+    <div class="carousel-track" id="teamCarousel">
+      <div class="card" data-original="true">
+        <div class="shine-effect"></div>
+        <img src="assets/logo.png" class="avatar" />
+        <h3 class="name shimmer-text">Koustav Shaw</h3>
+        <p class="title">Founder & CEO @ Listener</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+
+      <div class="card" data-original="true">
+        <div class="shine-effect"></div>
+        <img src="assets/logo.png" class="avatar" />
+        <h3 class="name shimmer-text">Anik Dasgupta</h3>
+        <p class="title">CTO @ Listener</p>
+        <p class="description">Lorem ipsum dolor sit amet...</p>
+      </div>
+
+      <div class="card" data-original="true">
+        <div class="shine-effect"></div>
+        <img src="assets/logo.png" class="avatar" />
+        <h3 class="name shimmer-text">Sirjan Kaur Pahuja</h3>
+        <p class="title">Frontend Developer @ Listener</p>
+        <p class="description">Lorem ipsum dolor sit amet...</p>
+      </div>
+
+      <div class="card" data-original="true">
+        <div class="shine-effect"></div>
+        <img src="assets/logo.png" class="avatar" />
+        <h3 class="name shimmer-text">Dewan Aviral</h3>
+        <p class="title">Backend Developer @ Listener</p>
+        <p class="description">Lorem ipsum dolor sit amet...</p>
+      </div>
     </div>
+
+    <button class="nav right" onclick="scrollCarousel(1)">&#10095;</button>
+  </div>
+</section>
+
 
     <!-- JavaScript for initializing background effects -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -193,7 +234,9 @@
     <script src="scripts/hero.js"></script>
     <script src="scripts/navbar.js"></script>
     <script src="scripts/about.js"></script>
-    <script src="scripts/mission.js"></script>
+    <script src="scripts/team.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('contextmenu', e => e.preventDefault());
     </script>
