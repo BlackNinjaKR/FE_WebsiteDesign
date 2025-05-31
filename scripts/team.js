@@ -77,32 +77,31 @@ function scrollCarousel(direction) {
 
     setTimeout(() => {
       const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-      if (carousel.scrollLeft >= maxScroll - scrollAmount * 2) {
-        const cards = carousel.querySelectorAll('.card');
-        cards.forEach((card, index) => {
-          if (index < 3) {
-            const clone = card.cloneNode(true);
-            setupCardAnimation(clone);
-            carousel.appendChild(clone);
-          }
-        });
-      }
+        if (carousel.scrollLeft >= maxScroll - scrollAmount * 2) {
+            const cards = Array.from(carousel.querySelectorAll('.card')).slice(0, 4);
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                setupCardAnimation(clone); // Make sure animation is bound
+                carousel.appendChild(clone);
+            });
+        }
     }, 500);
 
   } else {
     // Scroll left
-    if (carousel.scrollLeft <= scrollAmount) {
-      const cards = carousel.querySelectorAll('.card');
-      const toClone = Array.from(cards).slice(-3).reverse();
-      toClone.forEach(card => {
-        const clone = card.cloneNode(true);
-        setupCardAnimation(clone);
-        carousel.insertBefore(clone, carousel.firstChild);
-      });
+    if (carousel.scrollLeft <= scrollAmount * 2) {
+  const cards = Array.from(carousel.querySelectorAll('.card'));
+  const clones = cards.slice(-4).map(card => {
+    const clone = card.cloneNode(true);
+    setupCardAnimation(clone);
+    return clone;
+  });
+  clones.reverse().forEach(clone => {
+    carousel.prepend(clone);
+    carousel.scrollLeft += scrollAmount; // Adjust to prevent jump
+  });
+}
 
-      // Adjust scroll to prevent jump
-      carousel.scrollLeft += scrollAmount * 3;
-    }
 
     carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   }
@@ -160,22 +159,27 @@ function handleInfiniteScroll() {
   const scrollAmount = 320 + 32; // Approx card width + gap
   const maxScroll = carousel.scrollWidth - carousel.clientWidth;
 
-  if (carousel.scrollLeft >= maxScroll - scrollAmount * 2) {
-    const cards = carousel.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-      if (index < 3) {
-        const clone = card.cloneNode(true);
-        carousel.appendChild(clone);
-      }
-    });
-  }
+ if (carousel.scrollLeft >= maxScroll - scrollAmount * 2) {
+  const cards = Array.from(carousel.querySelectorAll('.card')).slice(0, 4);
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    setupCardAnimation(clone); // Make sure animation is bound
+    carousel.appendChild(clone);
+  });
+}
+
 
   if (carousel.scrollLeft <= scrollAmount * 2) {
-    const cards = carousel.querySelectorAll('.card');
-    cards.slice(-3).forEach(card => {
-      const clone = card.cloneNode(true);
-      carousel.prepend(clone);
-      carousel.scrollLeft += scrollAmount; // Prevent jump
-    });
-  }
+  const cards = Array.from(carousel.querySelectorAll('.card'));
+  const clones = cards.slice(-4).map(card => {
+    const clone = card.cloneNode(true);
+    setupCardAnimation(clone);
+    return clone;
+  });
+  clones.reverse().forEach(clone => {
+    carousel.prepend(clone);
+    carousel.scrollLeft += scrollAmount; // Adjust to prevent jump
+  });
+}
+
 }
