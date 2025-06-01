@@ -121,6 +121,7 @@
 /* Extra width declaration for layout consistency */
 .card {
   width: 320px;
+  text-align: center;
 }
 
 /* Shine animation triggered on hover */

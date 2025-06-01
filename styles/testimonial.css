@@ -1,0 +1,13 @@
+
+/* === Individual Testimonial Card Styling === */
+.testimonial-card {
+  background: transparent; /* Semi-transparent background */
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.5s ease-out; /* Smooth hover animation */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.testimonial-card:hover{
+  transform: scale(1.05);
+}
