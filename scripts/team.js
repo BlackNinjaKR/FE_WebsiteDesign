@@ -73,6 +73,8 @@ const observer = new IntersectionObserver((entries) => {
 // Initialize animation for all cards
 document.querySelectorAll('.card').forEach(setupCardAnimation);
 
+
+const card_no = 5
 // Scroll the carousel left or right, with infinite clone support
 function scrollCarousel(direction) {
   const scrollAmount = 352; // Width of card + margin/padding/gap
@@ -85,7 +87,7 @@ function scrollCarousel(direction) {
       const maxScroll = carousel.scrollWidth - carousel.clientWidth;
       if (carousel.scrollLeft >= maxScroll - scrollAmount * 2) {
         // Clone and append the first 4 cards when near the end
-        const cards = Array.from(carousel.querySelectorAll('.card')).slice(0, 4);
+        const cards = Array.from(carousel.querySelectorAll('.card')).slice(0, card_no);
         cards.forEach(card => {
           const clone = card.cloneNode(true);
           setupCardAnimation(clone); // Rebind animation to cloned card
@@ -99,7 +101,7 @@ function scrollCarousel(direction) {
     if (carousel.scrollLeft <= scrollAmount * 2) {
       // Clone and prepend the last 4 cards when near the beginning
       const cards = Array.from(carousel.querySelectorAll('.card'));
-      const clones = cards.slice(-4).map(card => {
+      const clones = cards.slice(-1*card_no).map(card => {
         const clone = card.cloneNode(true);
         setupCardAnimation(clone);
         return clone;
@@ -179,7 +181,7 @@ function handleInfiniteScroll() {
 
   // Clone & append cards when near the end
   if (carousel.scrollLeft >= maxScroll - scrollAmount * 2) {
-    const cards = Array.from(carousel.querySelectorAll('.card')).slice(0, 4);
+    const cards = Array.from(carousel.querySelectorAll('.card')).slice(0, card_no);
     cards.forEach(card => {
       const clone = card.cloneNode(true);
       setupCardAnimation(clone);
@@ -190,7 +192,7 @@ function handleInfiniteScroll() {
   // Clone & prepend cards when near the start
   if (carousel.scrollLeft <= scrollAmount * 2) {
     const cards = Array.from(carousel.querySelectorAll('.card'));
-    const clones = cards.slice(-4).map(card => {
+    const clones = cards.slice(-1 * card_no).map(card => {
       const clone = card.cloneNode(true);
       setupCardAnimation(clone);
       return clone;
