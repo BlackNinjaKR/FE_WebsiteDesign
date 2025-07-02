@@ -1,7 +1,7 @@
 # 🌐 FE Website Design
 A modern, responsive frontend website design featuring rich animations and immersive user experience. This project showcases advanced UI/UX techniques, including animated splash screens, interactive particle-based backgrounds, smooth transitions, and responsive layouts — all optimized for both desktop and mobile devices.
 
-🔗 **Live Demo**: https://fe-website-design.vercel.app/
+🔗 [**Live Demo**](https://fe-website-design.vercel.app/)
 
 ---
 
@@ -35,7 +35,7 @@ A modern, responsive frontend website design featuring rich animations and immer
   git clone https://github.com/your-username/fe-website-design.git
   cd fe-website-design
   ```
-2. Open in Browser
+2. Open in Browser  
   Just open `index.html` in your browser, or deploy using Vercel/Netlify.
 
 ---
